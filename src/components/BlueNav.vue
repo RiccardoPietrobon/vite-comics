@@ -44,13 +44,14 @@ export default {
 @use "../assets/scss/mymixin.scss" as *;
 
 nav {
-    background-color: var(--one-color);
+    background-color: hsl(209deg 98% 49%);
 }
 
 ul {
     @include between;
     padding: 40px 0px;
     color: white;
+    font-size: 14px;
 
     li:hover {
         cursor: pointer;

@@ -8,13 +8,13 @@
 @mixin flex_left {
     display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: flex-start;
 }
 
 @mixin flex_right {
     display: flex;
     justify-content: end;
-    align-items: center;
+    align-items: flex-start;
 }
 
 @mixin between {
@@ -34,6 +34,7 @@
 
 :root {
     --one-color: hsl(209deg 98% 49%);
-    --two-color: #20AD96;
-
+    --two-color: hsl(0deg 0% 19%);
 }
+
+;

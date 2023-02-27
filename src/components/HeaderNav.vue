@@ -51,8 +51,8 @@ ul {
         font-size: 12px;
 
         &:hover {
-            color: var(--one-color);
-            border-bottom: 4px solid var(--one-color);
+            color: hsl(209deg 98% 49%);
+            border-bottom: 4px solid hsl(209deg 98% 49%);
             cursor: pointer;
         }
     }
