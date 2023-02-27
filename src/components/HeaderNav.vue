@@ -27,9 +27,9 @@ export default {
                 <img src="../assets/img/dc-logo.png" alt="DC_logo">
             </div>
             <!-- items navbar -->
-            <Ul>
+            <ul>
                 <li v-for="item in items">{{ item }}</li>
-            </Ul>
+            </ul>
         </nav>
     </header>
 </template>
@@ -51,8 +51,8 @@ ul {
         font-size: 12px;
 
         &:hover {
-            color: hsl(209deg 98% 49%);
-            border-bottom: 4px solid hsl(209deg 98% 49%);
+            color: var(--one-color);
+            border-bottom: 4px solid var(--one-color);
             cursor: pointer;
         }
     }
