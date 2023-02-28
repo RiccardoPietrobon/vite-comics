@@ -4,28 +4,34 @@ export default {
         return {
             blueitems: [
                 {
-                    user: "../assets/img/buy-comics-digital-comics.png",
+                    user: "buy-comics-digital-comics.png",
                     text: "DIGITAL COMICS",
                 },
                 {
-                    user: "../assets/img/buy-comics-merchandise.png",
+                    user: "buy-comics-merchandise.png",
                     text: "DC MERCHANDISE",
                 },
                 {
-                    user: "../assets/img/buy-comics-shop-locator.png",
+                    user: "buy-comics-shop-locator.png",
                     text: "SUBSCRIPTION",
                 },
                 {
-                    user: "../assets/img/buy-comics-subscriptions.png",
+                    user: "buy-comics-subscriptions.png",
                     text: "COMIC SHOP LOCATOR",
                 },
                 {
-                    user: "../assets/img/buy-comics-dc-power-visa.svg",
+                    user: "buy-comics-dc-power-visa.svg",
                     text: "DC POWER VISA",
                 },
             ],
         };
     },
+
+    methods: {
+        getImagePath: function (img) {
+            return new URL(`../assets/img/${img}`, import.meta.url).href;
+        }
+    }
 };
 </script>
 
@@ -33,7 +39,8 @@ export default {
     <nav>
         <ul class="container">
             <li v-for="itemblue in blueitems">
-                <img :src="itemblue.user" alt="">
+                <img :src="getImagePath(itemblue.user)" alt="">
+
                 <span>{{ itemblue.text }}</span>
             </li>
         </ul>
@@ -44,7 +51,7 @@ export default {
 @use "../assets/scss/mymixin.scss" as *;
 
 nav {
-    background-color: hsl(209deg 98% 49%);
+    background-color: $one-color;
 }
 
 ul {
@@ -53,8 +60,20 @@ ul {
     color: white;
     font-size: 14px;
 
-    li:hover {
-        cursor: pointer;
+    li {
+        @include flex-center;
+
+        span {
+            margin: 0 5px;
+        }
+
+        img {
+            height: 40px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 </style>

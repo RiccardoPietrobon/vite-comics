@@ -72,7 +72,6 @@ export default {
 .dc-logo {
     width: 50%;
 
-
     img {
         width: 350px;
         height: 270px;

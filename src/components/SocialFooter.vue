@@ -5,18 +5,24 @@ export default {
         return {
             title: "FOLLOW US",
             social: [
-                "../assets/img/footer-facebook.png",
-                "../assets/img/footer-periscope.png",
-                "../assets/img/footer-pinterest.png",
-                "../assets/img/footer-twitter.png",
-                "../assets/img/footer-youtube.png",
+                "footer-facebook.png",
+                "footer-periscope.png",
+                "footer-pinterest.png",
+                "footer-twitter.png",
+                "footer-youtube.png",
             ]
         };
     },
+    methods: {
+        getImagePath: function (img) {
+            return new URL(`../assets/img/${img}`, import.meta.url).href;
+        }
+    }
 };
 </script>
 
 <template>
+    <img src="../" alt="">
     <section class="social">
         <div class="container">
             <div class="left-col">
@@ -26,7 +32,7 @@ export default {
                 <h2>{{ title }}</h2>
                 <ul>
                     <li v-for="pic in social">
-                        <img :src="pic" alt="">
+                        <img :src="getImagePath(pic)" alt="">
                     </li>
                 </ul>
             </div>
@@ -42,13 +48,36 @@ export default {
 }
 
 .social {
-    background-color: hsl(0deg 0% 19%);
+    background-color: $two-color;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-    border: 2px solid hsl(209deg 98% 49%);
-    padding: 10px;
+.left-col {
+    width: 50%;
+    @include flex-left;
+
+    a {
+        text-decoration: none;
+        color: white;
+        border: 2px solid $one-color;
+        padding: 10px;
+    }
+}
+
+.right-col {
+    width: 50%;
+    @include flex-right;
+
+    h2 {
+        color: $one-color;
+    }
+
+    ul {
+        @include flex-right;
+
+        li {
+            margin: 0 10px;
+        }
+    }
+
 }
 </style>

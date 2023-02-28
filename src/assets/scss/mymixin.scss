@@ -25,16 +25,13 @@
 
 /***** STYLE ******/
 .container {
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
 }
 
 /* COLORS */
 
-:root {
-    --one-color: hsl(209deg 98% 49%);
-    --two-color: hsl(0deg 0% 19%);
-}
 
-;
+$one-color: hsl(209deg 98% 49%);
+$two-color: hsl(0deg 0% 19%);
