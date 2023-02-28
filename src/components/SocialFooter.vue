@@ -22,7 +22,6 @@ export default {
 </script>
 
 <template>
-    <img src="../" alt="">
     <section class="social">
         <div class="container">
             <div class="left-col">

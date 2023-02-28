@@ -12,17 +12,19 @@ export default {
 </script>
 
 <template>
-    <img src="../assets/img/jumbotron.jpg" alt="">
-    <section class="cards-section">
-        <div class="container">
-            <a href=""></a>
-            <ul>
-                <!-- ciclo e faccio passare singleCard ovvero l'oggetto con tutti i suoi parametri -->
-                <CardHero v-for="card in arrayCards" :singleCard="card" />
-            </ul>
-        </div>
+    <div>
 
-    </section>
+        <img src="../assets/img/jumbotron.jpg" alt="">
+        <section class="cards-section">
+            <div class="container">
+                <a href=""></a>
+                <ul>
+                    <!-- ciclo e faccio passare singleCard ovvero l'oggetto con tutti i suoi parametri -->
+                    <CardHero v-for="card in arrayCards" :singleCard="card" />
+                </ul>
+            </div>
+        </section>
+    </div>
 </template>
 
 <style lang="scss" scoped>
