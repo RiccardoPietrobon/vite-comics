@@ -28,6 +28,10 @@ export default {
 <style lang="scss" scoped>
 @use "../assets/scss/mymixin.scss" as *;
 
+.cards-section {
+    background-color: $three-color;
+}
+
 img {
     height: 400px;
     width: 100%;
@@ -35,7 +39,8 @@ img {
     object-position: top;
 }
 
-.cards-section {
-    background-color: $three-color;
+ul {
+    display: flex;
+    flex-wrap: wrap;
 }
 </style>
